@@ -1,0 +1,131 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,300;1,400&display=swap');
+
+body{
+    background: url('img/bg-site.png') center center no-repeat fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Cinzel', serif;
+    font-family: 'Roboto', sans-serif;
+  }
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.box {
+    width: 500px;
+    height: 350px;
+    margin: 20px;
+    background: rgba(255, 255, 255, 0.225);
+    box-shadow: 0 8px 32px 0 rgba(2, 3, 13, 0.689);
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    opacity: 0.9;
+    text-align: center;
+    color: azure;
+}
+
+h2{
+    font-size: 13pt;
+    font-weight: 300;
+    text-align: left;
+    margin-left: 70px;
+    margin-bottom: -10px;
+    text-shadow: 0 0 5px  rgb(0, 0, 0);
+}
+
+h3{
+    width: 360px;
+    height: 40px;
+    margin-left: 70px;
+    background: rgba(0, 0, 0, 0.41);
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 20px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.user{
+    background-color: rgba(255, 255, 255, 0);
+    border: 0 none;
+    outline: 0;
+    width: 330px;
+    height: 35px;
+    border-radius: 20px;
+    font-size: 13pt;
+    margin-left: 0px;
+    color: rgba(255, 255, 255, 0.578);;
+}
+
+.pass{
+    background-color: rgba(255, 255, 255, 0);
+    border: 0 none;
+    outline: 0;
+    width: 330px;
+    height: 35px;
+    border-radius: 20px;
+    font-size: 13pt;
+    margin-left: 5px;
+    margin-right: 0px;
+    color: rgba(255, 255, 255, 0.578);;
+}
+
+h4{
+    font-weight: 100;
+    font-size: 10pt;
+    margin-top: -16px;
+    text-align: right;
+    margin-right: 80px;
+}
+
+a.recover{
+    text-decoration: none;
+    color: white;
+}
+
+a.recover:hover{
+    text-decoration: underline;
+}
+
+a.recover:active{
+    color: rgb(175, 175, 175);
+}
+
+.button-login{
+    background-color: white;
+    width: 250px;
+    height: 45px;
+    outline: 0 none;
+    border: 0 none;
+    border-radius: 40px;
+    font-size: 13pt;
+    color: rgb(12, 8, 8);
+    font-weight: 700;
+}
+
+.button-login:hover{
+    background-color: rgba(255, 255, 255, 0.325);
+    border: 10px 10px 10px rgb(0, 0, 0);
+    outline: auto;
+    transition: 0.4s;
+}
+
+.button-login:active{
+    background-color: white;
+    transition: 0s;
+}
+
+body {
+    margin: 0px;
+}
