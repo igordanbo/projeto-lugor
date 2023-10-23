@@ -7,15 +7,16 @@
     <title>Entrar no Lugor</title>
 </head>
 <body>
-    <form action="verifica-login.php" method="get">
         <div class="container">
             <div class="box">
                 <h1>
                     Entrar no Lugor.
                 </h1>
+                <h5 class="erro" id="erro" name="erro">Login incorreto. Tente novamente</h5>
                 <h2>
                     Usuário
                 </h2>
+
                 <h3>
                     <input type="text" id="user" name="user" class="user">
                 </h3>
@@ -30,11 +31,28 @@
                         Esqueci a senha
                     </a>
                     </h4>
-                <button id="button-login" class="button-login">
+                <button id="button-login" class="button-login" name="button-login">
                     Login
                 </button>
-    </form>
-        </div>
+            </div>
         </div>
 </body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(".erro").hide();
+    $(document).ready(function(){
+        $("button[name = 'button-login']").click(function(){
+            var user = $("input[name = 'user']").val();
+            var password = $("input[name = 'pass']").val();
+            $.post("verifica-login.php", {email: user, senha: password}, function(resultado){
+                if(resultado == "nexiste"){
+                    $(".erro").show();
+                }else{
+                    $(".erro").hide();
+                }
+            });
+        });
+    });
+</script>
 </html>
