@@ -9,16 +9,18 @@ body{
     background-size: cover;
     font-family: 'Cinzel', serif;
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
   }
 
 .container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    
+    flex-direction: row;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+   
 }
 
 .box {
@@ -34,6 +36,9 @@ body{
     opacity: 0.9;
     text-align: center;
     color: azure;
+    min-width: 500px;
+    min-height: 350px;
+    
 }
 
 h2{
@@ -49,6 +54,7 @@ h3{
     width: 360px;
     height: 40px;
     margin-left: 70px;
+    text-align: center;
     background: rgba(0, 0, 0, 0.41);
     backdrop-filter: blur( 13.5px );
     -webkit-backdrop-filter: blur( 13.5px );
@@ -70,11 +76,10 @@ h3{
 
 .pass{
     background-color: rgba(255, 255, 255, 0);
-    border: 0 none;
-    outline: 0;
+    border: none;
+    outline: none;
     width: 330px;
     height: 35px;
-    border-radius: 20px;
     font-size: 13pt;
     margin-left: 5px;
     margin-right: 0px;

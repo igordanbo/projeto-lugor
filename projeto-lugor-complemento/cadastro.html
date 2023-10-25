@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    <link rel="icon" type="image/x-icon" href="img/fav-icon-lugor.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    <div class="container">
+        <main>
+            <form action="cadastro.php" method="get">
+                <h1>Cadastre-se no Lugor</h1>
+                
+                <label for="nome"><span class="centr">Nome</span>
+                <input type="text" name="nome" id="nome" placeholder="Seu primeiro nome" required></label><br>
+
+                <label for="sobrenome"><span class="centr">Sobr.</span>
+                <input type="text" name="sobrenome" id="sobrenome" placeholder="Seu sobrenome" required></label><br>
+
+                <label for="email"><span class="centr">Email</span>
+                <input type="email" id="email" name="email" placeholder="Seu e-mail" required></label><br>
+                <h6 class="erro">Esse email já está cadastrado</h6>
+
+                <label for="senha"><span class="senha">Senha</span>
+                <input type="password" name="senha" id="senha" placeholder="Digite uma senha" required></label><br>
+
+                <button type="submit" class="material-symbols-outlined" id="entrar">share_windows</button>
+            </form>
+        </main>
+    </div>
+</body>
+
+    <script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(".erro").hide();
+        var botaoEnviar = document.getElementById('entrar');
+        var inputEmail = document.getElementById('email');
+        $(document).ready(function(){
+            $("input[name='email']").blur(function(){
+                var email = $(this).val();
+                $.post("verifica-email.php", {email: email}, function(resultado){
+                    if(resultado == 'existe'){
+                        $(".erro").show();
+                        botaoEnviar.disabled = true;
+                        inputEmail.style.border = '2px solid rgba(255, 0, 0, 0.808)';
+                    }else{
+                        $(".erro").hide();
+                        botaoEnviar.disabled = false;
+                        inputEmail.style.border = '1px solid black';
+                    }
+                });
+            });
+        });
+    </script>
+    
+</html>
