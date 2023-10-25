@@ -1,13 +1,16 @@
 <?php 
 
-    $email = $_REQUEST['user'];
-    $senha = $_REQUEST['password'];
+    $email = $_REQUEST['email'];
+    $senha = $_REQUEST['senha'];
 
-    $conexao = new mysqli('localhost', 'root', '123456', 'cadastro');
+    $conexao = new mysqli("localhost", "root", "123456", "cadastro");
 
-    $consult = "SELECT * FROM users WHERE email = ? and senha = ?";
+    if($conexao->error){
+        echo "Erro na conexão";
+        return;
+    }
 
-    $stmt = $conexao->prepare($consult);
+    $stmt = $conexao->prepare("SELECT * FROM users WHERE email = ? and senha = ?");
     $stmt->bind_param('ss', $email, $senha);
     $stmt->execute();
 
