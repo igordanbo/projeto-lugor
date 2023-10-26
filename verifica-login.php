@@ -1,7 +1,5 @@
 <?php 
 
-    //Commit
-
     $email = $_REQUEST['email'];
     $senha = $_REQUEST['senha'];
 
