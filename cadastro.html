@@ -44,7 +44,7 @@
                 $.post("verifica-email.php", {email: email}, function(resultado){
                     if(resultado == 'existe'){
                         $(".erro").show();
-                        botaoEnviar.disabled = true;
+                        $(botaoEnviar).prop('disabled', true);
                         inputEmail.style.border = '2px solid rgba(255, 0, 0, 0.808)';
                     }else{
                         $(".erro").hide();
