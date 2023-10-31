@@ -271,3 +271,14 @@ button#send{
     margin-bottom: 4px;
 
 }
+
+div#modalEsqueciSenha{
+    display: none;
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    background-color: #6e0102;
+    top: 0px;
+    left: 50px;
+    border-radius: 20px;
+}

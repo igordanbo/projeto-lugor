@@ -33,16 +33,24 @@
                     <input type="password" id="pass" name="pass" class="pass">
                 </h3>
                 <h4>
-                    <a class="recover" href="#">
+                    <a class="recover" id="recover" href="#">
                         Esqueci a senha
                     </a>
                 </h4>
                 <button id="button-login" class="button-login" name="button-login">
                     Login
                 </button>
+
+                <div id="modalEsqueciSenha">
+                    <label for="emailEsqueciSenha">Digite um email para recuperar sua senha</label>
+                    <input type="email">
+                    <button type="submit" id="entrar">Enviar</button>
+                </div>
             </div>
         </main>
     </div>
+
+    
 </body>
 
 
@@ -60,6 +68,29 @@
                     $(".erro").hide();
                 }
             });
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+
+        //Botão Esqueci a Senha
+        var btnEsqueciSenha = document.getElementById("recover");
+
+        //Modal Esqueci a Senha
+        var modalEsqueciSenha = document.getElementById("modalEsqueciSenha");
+        
+        //Quando clicado no botão Esqueci a Senha, mostra o modal
+        btnEsqueciSenha.addEventListener("click", function(){
+            modalEsqueciSenha.style.display = "block";
+        });
+
+        //Se clicado fora do modal, oculta o modal
+        window.addEventListener("click", function(event){
+            if(event.target == modalEsqueciSenha){
+                modalEsqueciSenha.style.display = "none";
+            }
         });
     });
 </script>
