@@ -41,7 +41,7 @@
                     Login
                 </button>
 
-                <div id="modalEsqueciSenha">
+                <div id="modalEsqueciSenha" class="modalEsqueciSenha">
                     <label for="emailEsqueciSenha">Digite um email para recuperar sua senha</label>
                     <input type="email">
                     <button type="submit" id="entrar">Enviar</button>
@@ -50,7 +50,7 @@
         </main>
     </div>
 
-    
+
 </body>
 
 
@@ -73,25 +73,39 @@
 </script>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function(){
+    document.addEventListener("DOMContentLoaded", function () {
 
         //Botão Esqueci a Senha
         var btnEsqueciSenha = document.getElementById("recover");
 
         //Modal Esqueci a Senha
         var modalEsqueciSenha = document.getElementById("modalEsqueciSenha");
-        
+
+        //Inicializando o display do modal como none
+        modalEsqueciSenha.style.display = "none";
+
+        var botaoClicado;
+
         //Quando clicado no botão Esqueci a Senha, mostra o modal
-        btnEsqueciSenha.addEventListener("click", function(){
+        btnEsqueciSenha.addEventListener("click", function () {
             modalEsqueciSenha.style.display = "block";
+            setTimeout(function(){
+                modalEsqueciSenha.classList.add("show");
+            }, 50);
+            
+            botaoClicado = true;
         });
 
-        //Se clicado fora do modal, oculta o modal
-        window.addEventListener("click", function(event){
-            if(event.target == modalEsqueciSenha){
-                modalEsqueciSenha.style.display = "none";
+        window.addEventListener("click", function (event) {
+            if (botaoClicado == false) {
+                if (!(event.target == modalEsqueciSenha)) {
+                    modalEsqueciSenha.style.display = "none";
+                }
+            } else {
+                botaoClicado = false;
             }
-        });
+
+        })
     });
 </script>
 
