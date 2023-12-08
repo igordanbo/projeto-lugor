@@ -27,15 +27,15 @@
 
                 <!--Inputs da tela de login-->
                 <div class="alert alert-danger erro">Login incorreto! Tente Novamente</div>
-                <h2> Usuário </h2>
+                <label for="user">Usuário</label>
                 <h3> <input type="text" id="user" name="user" class="user"> </h3>
-                <h2> Senha </h2>
+                <label for="pass">Senha</label>
                 <h3> <input type="password" id="pass" name="pass" class="pass"> </h3>
 
                 <!--Botões de ação-->
                 <button id="button-login" class="button-login btn btn-primary" name="button-login">Login</button><br><br>
                 <p>Ou</p>
-                <h5> <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalEsqueciSenha">Esqueci a Senha</button> </h5>
+                <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalEsqueciSenha">Esqueci a Senha</button>
                 
             </div>
         </div>
@@ -45,17 +45,22 @@
             <div class="modal-dialog modal-dialog-centered" modal-backdrop-opacity=".2">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h2 class="modal-title">Título do Modal</h2>
+                        <h2 class="modal-title">Redefina sua Senha</h2>
                         <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
                     </div>
                     <div class="modal-body">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, architecto dolorum
-                            nulla obcaecati aliquam quas quod in ratione et assumenda cumque hic rerum esse ut
-                            iste, eius voluptatum nihil odit!</p>
+                        <label class="centralize" for="emailRestore">Digite seu e-mail</label>
+                        <h3 class="centralize"><input type="email" name="emailRestore" id="emailRestore"></h3>
+
+                        <!--Alerta de sucesso-->
+                        <div class="alert alert-success alert-restore">
+                            <h5 class="alert-heading">E-mail enviado!</h5>
+                            <p>Foi enviado um email para que você possa redefinir sua senha.</p>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                        <button type="button" class="btn btn-primary">Save Changes</button>
+                        <button type="button" class="btn btn-primary" id="sendRestore">Enviar</button>
                     </div>
                 </div>
             </div>
