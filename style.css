@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,300;1,400&display=swap');
 
 body {
     background: url('img/bg-site.png') center center no-repeat fixed; 
@@ -7,43 +6,29 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    font-family: 'Cinzel', serif;
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
     overflow-y: hidden;
 }
 
-.container {
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    display: flex;
-    width: 100vw;
-    height: 100vh; 
-}
-
-main {
-    /*
-    background-color: #05a6f7b9;
-    width: 700px;
-    margin: auto;
-    border-radius: 20px;
-    min-height: 400px;
-    */
+.my-container{
     width: 500px;
-    height: 400px;
-    margin: 20px;
+    margin: 10% auto auto auto;
     background: rgba(255, 255, 255, 0.225);
+    color: azure;
     box-shadow: 0 8px 32px 0 rgba(2, 3, 13, 0.689);
     backdrop-filter: blur( 13.5px );
-    -webkit-backdrop-filter: blur( 13.5px );
+    /*-webkit-backdrop-filter: blur( 13.5px );*/
     border-radius: 20px;
     border: 1px solid rgb(255, 255, 255);
     opacity: 0.9;
     text-align: center;
-    color: azure;
     min-width: 500px;
     min-height: 420px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
 }
 
 h1 {
@@ -75,7 +60,6 @@ label {
     font-weight: 300;
     border-radius: 10px;
     outline: none;
-    
 }
 
 input {
@@ -119,7 +103,7 @@ span {
     text-align: right;
 }
 
-span#visivel{
+#visivel{
     margin-top: 6px;
     float: right;
     left: 270px;
@@ -130,7 +114,7 @@ span#visivel{
     margin: -15px;
 }
 
-button[type = submit]#entrar, #postar, #voltar {
+#entrar, #postar, #voltar {
     background-color: white;
     width: 250px;
     height: 45px;
@@ -145,7 +129,7 @@ button[type = submit]#entrar, #postar, #voltar {
 
 
 
-button[type = submit]#entrar:hover{
+#entrar:hover{
     background-color: rgba(255, 255, 255, 0.325);
     border: 10px 10px 10px rgb(0, 0, 0);
     outline: auto;
@@ -181,6 +165,7 @@ button[type = submit]#entrar:hover{
     background-color: white;
     transition: 0s;
 }
+
 h5{
     text-align: center;
     font-weight: 100;
@@ -195,13 +180,13 @@ textarea{
     font-size: 17px;
 }
 
-button#postar{
+#postar{
     margin: -30px auto auto auto;
     float: right;
     transform: translate(-50%, 45px);
 }
 
-div.post{
+.post{
     background-color: #082AFC;
     width: 450px;
     margin: auto;
@@ -213,14 +198,14 @@ div.post{
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.747);
 }
 
-div.post>h3{
+.post>h3{
     background-color: #08fcc7d3;
     border-top-right-radius: 12px;
     border-top-left-radius: 12px;
     padding: 8px;
 }
 
-input#titulo{
+#titulo{
     float: left;
     width: 391px;
     margin: 10px 0px 10px 20px;
@@ -228,7 +213,7 @@ input#titulo{
     font-size: 17px;
 }
 
-p#dataPost{
+#dataPost{
     margin-left: 370px;
     font-size: 11px;
 }
@@ -255,19 +240,11 @@ button#send{
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.705);
 }
 
+#modalEsqueciSenha{
+    margin-top: -50px;
+}
 
-
-.erro{
-    margin-top: -20px;
-    margin-bottom: 8px;
-    color: rgba(248, 248, 248, 0.808);
-    background-color: #6e0102;
-    justify-content: center;
-    text-align: center;
-    border-radius: 10px;
-    width: 170px;
-    margin: auto;
-    margin-top: -14px;
-    margin-bottom: 4px;
-
+/*Modifica o fundo ao abrir o modal #modalEsqueciSenha*/
+.modal-backdrop {
+    background-color: azure;
 }
