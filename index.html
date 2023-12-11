@@ -27,15 +27,16 @@
 
                 <!--Inputs da tela de login-->
                 <div class="alert alert-danger erro">Login incorreto! Tente Novamente</div>
-                <label for="user">Usuário</label>
+                <label class="lbluser" for="user">Usuário</label>
                 <h3> <input type="text" id="user" name="user" class="user"> </h3>
-                <label for="pass">Senha</label>
+                <label  class="lblpass" for="pass">Senha</label>
                 <h3> <input type="password" id="pass" name="pass" class="pass"> </h3>
 
                 <!--Botões de ação-->
+                <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalEsqueciSenha">Esqueci a Senha</button><br>
                 <button id="button-login" class="button-login btn btn-primary" name="button-login">Login</button><br><br>
-                <p>Ou</p>
-                <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalEsqueciSenha">Esqueci a Senha</button>
+                
+               
                 
             </div>
         </div>
@@ -50,7 +51,7 @@
                     </div>
                     <div class="modal-body">
                         <label class="centralize" for="emailRestore">Digite seu e-mail</label>
-                        <h3 class="centralize"><input type="email" name="emailRestore" id="emailRestore"></h3>
+                        <h3 class="centralize"><input class="emailrescue" type="email" name="emailRestore" id="emailRestore"></h3>
 
                         <!--Alerta de sucesso-->
                         <div class="alert alert-success alert-restore">
